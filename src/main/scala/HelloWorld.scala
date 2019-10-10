@@ -27,6 +27,17 @@ object HelloWorld {
   println(message2)
   println(message3)
 
+  // Expressions have a value as outcome but statements don't
+  // value + age is same as value.+(age)
+  // value min age is same as value.min(age)
+  // + has more precedence than min (char started)
+  println(value min age + 5)
+  // value == age is false
+  println(name == "Pat Cook") // in scala true; in java false
+  println(" Hi " * 5)
+  // 4+5 = 9; 4+5.0 = 9.0; 9/5 = 1; 9%5 = 4; 9/5.0 = 1.8
+  // true && true = true; !true = false
+
   /**
     * This is the main method for the application.
     * @param args the arguments to the application.
