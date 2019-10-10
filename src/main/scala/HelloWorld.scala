@@ -20,6 +20,13 @@ object HelloWorld {
   val (a,b,c) = t
   println(t._1)
 
+  val message = name + " is " + age + " years old." // string concatenation
+  val message2 = s"$name is ${age+1} years old." // string interpolation
+  val message3 = s"The second element of t is ${t._2}."
+  println(message)
+  println(message2)
+  println(message3)
+
   /**
     * This is the main method for the application.
     * @param args the arguments to the application.
