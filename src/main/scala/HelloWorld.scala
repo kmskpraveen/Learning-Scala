@@ -58,5 +58,36 @@ object HelloWorld {
     */
   def main(args: Array[String]): Unit = {
     println("Hello World!") // This prints something
+
+    var i = 0
+    while(i < 10) {
+      println(i)
+      i += 1 // i = i + 1
+      // There are no prefix or postfix operators in scala (like i++ or so)
+    }
+    // While is like a statement
+    i = 0
+    do {
+      println(i)
+      i += 1
+    } while(i < 10)
+
+    // If is like an expression but can also use as statement
+    if (age < 18) {
+      println("No Entrance")
+    } else {
+      println("Come in")
+    }
+    val response = if (age < 18) {
+      "No Entrance"
+    } else {
+      "Come in"
+    }
+    println(response)
+    println(if (age < 18) "No Entrance" else "Come in")
+
+    val a = if(true) "hi" else 5 // This is possible as a is any
+    // .. but not preferred much
+
   }
 }
