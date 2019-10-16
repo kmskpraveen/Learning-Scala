@@ -89,5 +89,39 @@ object HelloWorld {
     val a = if(true) "hi" else 5 // This is possible as a is any
     // .. but not preferred much
 
+    // For is also used as statements and as expressions
+    // Here in for (..) we are using generators
+    for (i <- 0 to 10) { // you can also use until instead of to but 10 won't print
+      println(i)
+    }
+    // We can also put conditionals in for (..)
+    for (i <- 0 until 10; if i%3==0 || i%5==0) {
+      println(i)
+    }
+    // we can also use multiple generators and have variables
+    for (i <- 0 until 10; if i%3==0 || i%5==0; sqr = i*i; j <- 'a' to 'c') {
+      println(i+" "+j)
+    }
+    // Alternate syntax for above one
+    // .. use curly braces to get rid of semi-columns
+    for {
+      i <- 0 until 10
+      if i % 3 == 0 || i % 5 == 0
+      sqr = i * i
+      j <- 'a' to 'c'
+    } {
+      println(i+" "+j)
+    }
+    // In order to use for as expression use 'yield'
+    val stuff = for {
+      i <- 0 until 10
+      if i % 3 == 0 || i % 5 == 0
+      sqr = i * i
+      j <- 'a' to 'c'
+    } yield {
+      i -> j
+    }
+    println(stuff)
+
   }
 }
