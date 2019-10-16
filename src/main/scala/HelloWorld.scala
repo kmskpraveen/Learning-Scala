@@ -38,6 +38,20 @@ object HelloWorld {
   // 4+5 = 9; 4+5.0 = 9.0; 9/5 = 1; 9%5 = 4; 9/5.0 = 1.8
   // true && true = true; !true = false
 
+  // Lambda expressions or closures or function leterals
+  // In python it is referred with keyword 'lambda'
+  // In scala it has syntax => (pronounced as rocket)
+  val square = (x:Double) => x*x
+  // or val square: Double => Double = x => x*x
+  println(square(14))
+  // Note that def square(x:Double):Double = x*x
+  // .. is a method
+  val twice: Double => Double = _*2
+  val lt: (Double, Double) => Boolean = _ < _
+  println(twice(5))
+  println(lt(5,9))
+  // _ cannot be used in square as it uses x 2 times
+
   /**
     * This is the main method for the application.
     * @param args the arguments to the application.
