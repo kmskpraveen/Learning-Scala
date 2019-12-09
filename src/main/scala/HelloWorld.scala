@@ -123,5 +123,26 @@ object HelloWorld {
     }
     println(stuff)
 
+    // match expression
+    // fizzbuzz example (traditional)
+    val fizzbuzz = for(i <- 1 to 20) yield {
+      if(i%3==0 && i%5==0) "fizzbuzz"
+      else if(i%3==0) "fizz"
+      else if(i%5==0) "buzz"
+      else i.toString
+    }
+    println(fizzbuzz)
+
+    // fizzbuzz example using match
+    val fizzbuzz1 = for(i <- 1 to 20) yield {
+      (i%3,i%5) match {
+        case (0,0) if i<25=> "fizzbuzz"  // you can also add if statements
+        case (0,_) => "fizz"
+        case (_,0) => "buzz"
+        case _ => i.toString
+      }
+    }
+    println(fizzbuzz1)
+
   }
 }
