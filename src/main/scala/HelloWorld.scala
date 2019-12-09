@@ -144,5 +144,14 @@ object HelloWorld {
     }
     println(fizzbuzz1)
 
+    // try/catch is an expression which is used for error handling
+    val str = "123a"
+    val num = try {
+      str.toInt
+    } catch { // {}s + with cases inside --> partial functions
+      case ex: NumberFormatException => 0
+    }
+    println(num) // Note: println gives back a Unit
+
   }
 }
