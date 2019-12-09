@@ -153,5 +153,16 @@ object HelloWorld {
     }
     println(num) // Note: println gives back a Unit
 
+    // Scopes in scala is defined by {}s
+    // Declarations (right now): object, val, var, def, class, trait, type
+    // type declaration allows us to provide a different name for a particular type
+    // Any variable can be used from the point of declaration to the end of scope (})
+    // arguments to the functions can be used throughout the function
+    val thing = {
+      val thing2 = 42
+      println("In the block")
+      thing2 // thing2 is stored in thing
+    }
+    println(thing) // But cannot print thing2 as it scope is not here
   }
 }
