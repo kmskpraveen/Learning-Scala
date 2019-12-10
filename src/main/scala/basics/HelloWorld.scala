@@ -2,7 +2,7 @@
  * This file created for Object-Orientation, Abstraction,
  * and Data Structures using Scala
  */
-
+package basics
 /**
   * This is the main object for our application
   */
@@ -164,5 +164,8 @@ object HelloWorld {
       thing2 // thing2 is stored in thing
     }
     println(thing) // But cannot print thing2 as it scope is not here
+
+    // Documentation for the scala standard library: https://www.scala-lang.org/api/2.13.1/
+
   }
 }
